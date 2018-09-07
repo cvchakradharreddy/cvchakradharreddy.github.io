@@ -1,0 +1,421 @@
+/* line 1, ../sass/_common.scss */
+.alignCenter {
+  text-align: center;
+}
+
+/* line 4, ../sass/_common.scss */
+.alignRight {
+  text-align: right;
+}
+
+/* line 7, ../sass/_common.scss */
+.alignLeft {
+  text-align: left;
+}
+
+/* line 11, ../sass/_common.scss */
+.justifyText {
+  text-align: justify;
+}
+
+/* line 15, ../sass/_common.scss */
+.fullHeight, .contactContainer {
+  height: 100%;
+}
+
+/* line 27, ../sass/_common.scss */
+.contactContainer .centerBorder, .contactContainer .innerBorder {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 32, ../sass/_common.scss */
+.textOverflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 38, ../sass/_common.scss */
+.myContactInfo {
+  column-count: 2;
+  column-gap: 5px;
+}
+
+/* line 3, ../sass/_homepage.scss */
+.homeSection, .skillsSection, .experienceSection, .contactSection {
+  display: none;
+}
+
+/* line 7, ../sass/_homepage.scss */
+.appContainer {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+/* line 11, ../sass/_homepage.scss */
+.appContainer.homePage .homeSection, .appContainer.skillsPage .skillsSection, .appContainer.experiencePage .experienceSection, .appContainer.contactPage .contactSection {
+  display: block !important;
+}
+/* line 15, ../sass/_homepage.scss */
+.appContainer.homePage {
+  background-color: darkslategray;
+}
+/* line 19, ../sass/_homepage.scss */
+.appContainer.skillsPage {
+  background-color: darkslateblue;
+}
+/* line 23, ../sass/_homepage.scss */
+.appContainer.experiencePage {
+  background-color: darkolivegreen;
+}
+/* line 27, ../sass/_homepage.scss */
+.appContainer.contactPage {
+  background-color: goldenrod;
+}
+
+/* line 32, ../sass/_homepage.scss */
+.headerContainer {
+  height: 9%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+/* line 38, ../sass/_homepage.scss */
+.headerContainer .navbar-inverse {
+  background-color: inherit !important;
+  border: none;
+}
+/* line 42, ../sass/_homepage.scss */
+.headerContainer .navbar-inverse li {
+  float: right;
+}
+/* line 46, ../sass/_homepage.scss */
+.headerContainer .navbar-inverse a {
+  padding-left: 0px;
+  cursor: pointer;
+}
+
+/* line 53, ../sass/_homepage.scss */
+.sectionContainer {
+  position: relative;
+  top: 10%;
+  height: 75%;
+  width: 100%;
+}
+
+/* line 60, ../sass/_homepage.scss */
+.footerContainer {
+  height: 6%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  color: lightslategray;
+}
+
+/* line 71, ../sass/_homepage.scss */
+.banner {
+  height: 100%;
+  background: inherit !important;
+}
+
+/* line 76, ../sass/_homepage.scss */
+.bannerContainer {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* line 87, ../sass/_homepage.scss */
+.myContactInfo {
+  padding: 40px;
+}
+
+/* line 92, ../sass/_homepage.scss */
+.myButtons {
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  position: relative;
+  border: 2px solid #fff;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 105, ../sass/_homepage.scss */
+.contact {
+  position: relative;
+  background-color: transparent;
+  border: 0px;
+}
+/* line 113, ../sass/_homepage.scss */
+.contact:before, .contact:after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -12px;
+  width: 90px;
+  height: 25px;
+  z-index: 1;
+}
+/* line 122, ../sass/_homepage.scss */
+.contact:before {
+  border: 2px solid #EE283E;
+  background-color: #1F3944;
+  transform: skew(-25deg);
+  transition: 0.3s ease-in-out;
+}
+/* line 129, ../sass/_homepage.scss */
+.contact:after {
+  content: "Available for work";
+  font-size: xx-small;
+  top: -7px;
+  left: -13px;
+  color: white;
+}
+/* line 137, ../sass/_homepage.scss */
+.contact:hover:before {
+  transition: 0.3s ease-in-out;
+  background-color: #EE283E;
+}
+/* line 142, ../sass/_homepage.scss */
+.contact .contactButton {
+  overflow: hidden;
+  border-color: darkgoldenrod;
+  color: darkgoldenrod;
+}
+/* line 147, ../sass/_homepage.scss */
+.contact .contactButton .layer {
+  color: #fff;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: darkgoldenrod;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 159, ../sass/_homepage.scss */
+.contact .contactButton:hover .layer {
+  top: 0;
+  font-size: x-large;
+}
+
+/* line 168, ../sass/_homepage.scss */
+.resumeButton {
+  overflow: hidden;
+  border-color: deepskyblue;
+  color: deepskyblue;
+}
+/* line 173, ../sass/_homepage.scss */
+.resumeButton .layer {
+  color: #fff;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: deepskyblue;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 185, ../sass/_homepage.scss */
+.resumeButton:hover .layer {
+  top: 0;
+  font-size: x-large;
+}
+
+/* line 192, ../sass/_homepage.scss */
+.sectionSelector {
+  color: powderblue;
+  font-size: large;
+  cursor: pointer;
+  width: 100%;
+  height: 5%;
+  position: fixed;
+  bottom: 10%;
+  left: 0px;
+  text-align: center;
+}
+/* line 202, ../sass/_homepage.scss */
+.sectionSelector span {
+  padding: 2.5px;
+}
+/* line 205, ../sass/_homepage.scss */
+.sectionSelector .selected svg {
+  transform: scale(1.5, 1.5);
+}
+/* line 208, ../sass/_homepage.scss */
+.sectionSelector .unSelected svg:hover {
+  transform: scale(1.5, 1.5);
+}
+
+/* line 214, ../sass/_homepage.scss */
+.extraLargeIcons {
+  font-size: -webkit-xxx-large;
+  font-size: xxx-large;
+}
+
+/* line 219, ../sass/_homepage.scss */
+.contactContainer {
+  color: ghostwhite;
+  border-style: ridge;
+  width: 70%;
+  padding: 3px;
+}
+/* line 225, ../sass/_homepage.scss */
+.contactContainer .centerBorder {
+  border-style: dotted;
+  padding: inherit;
+}
+/* line 230, ../sass/_homepage.scss */
+.contactContainer .innerBorder {
+  border-style: double;
+  padding: inherit;
+}
+/* line 236, ../sass/_homepage.scss */
+.contactContainer .contactDiv {
+  padding: 10px;
+  width: 70%;
+  border-bottom: 1px solid gray;
+}
+/* line 242, ../sass/_homepage.scss */
+.contactContainer .contactInput {
+  border: none;
+  background: transparent;
+  height: 30px;
+  width: 100%;
+}
+/* line 247, ../sass/_homepage.scss */
+.contactContainer .contactInput:focus {
+  outline: none;
+}
+/* line 251, ../sass/_homepage.scss */
+.contactContainer .contactMessage {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+/* line 255, ../sass/_homepage.scss */
+.contactContainer .contactMessage:focus {
+  outline: none;
+}
+/* line 260, ../sass/_homepage.scss */
+.contactContainer .sendButton {
+  float: right;
+  letter-spacing: 1px;
+  background: none;
+  color: white;
+  position: relative;
+  top: -16px;
+  outline: none;
+  border: none;
+  height: 90%;
+  width: 190px;
+  font-size: 14px;
+  z-index: 2;
+  transition: .01s .23s ease-out all;
+  overflow: hidden;
+}
+/* line 275, ../sass/_homepage.scss */
+.contactContainer .sendButton:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  background: #202020;
+  z-index: -1;
+  transition: .3s ease-in all;
+}
+/* line 286, ../sass/_homepage.scss */
+.contactContainer .sendButton:after {
+  content: '';
+  position: absolute;
+  left: -5%;
+  top: 5%;
+  height: 90%;
+  width: 5%;
+  background: white;
+  z-index: -1;
+  transition: .4s .02s ease-in all;
+}
+/* line 297, ../sass/_homepage.scss */
+.contactContainer .sendButton:hover {
+  cursor: pointer;
+  color: transparent;
+}
+/* line 300, ../sass/_homepage.scss */
+.contactContainer .sendButton:hover:before {
+  left: 100%;
+  width: 25%;
+}
+/* line 304, ../sass/_homepage.scss */
+.contactContainer .sendButton:hover:after {
+  left: 100%;
+  width: 70%;
+}
+/* line 308, ../sass/_homepage.scss */
+.contactContainer .sendButton:hover .icon-right.after:after {
+  left: -80px;
+  color: white;
+  transition: .2s .2s ease all;
+}
+/* line 313, ../sass/_homepage.scss */
+.contactContainer .sendButton:hover .icon-right.after:before {
+  left: -104px;
+  top: 14px;
+  opacity: 0.2;
+  color: white;
+}
+/* line 322, ../sass/_homepage.scss */
+.contactContainer .icon-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+/* line 326, ../sass/_homepage.scss */
+.contactContainer .icon-right:after {
+  font-family: "FontAwesome";
+  content: '\2192';
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translate3D(0, -50%, 0);
+}
+/* line 335, ../sass/_homepage.scss */
+.contactContainer .icon-right.after:after {
+  left: -250px;
+  color: black;
+  top: 50%;
+  transition: .15s .25s ease left, .5s .05s ease color;
+}
+/* line 341, ../sass/_homepage.scss */
+.contactContainer .icon-right.after:before {
+  content: 'Send';
+  position: relative;
+  left: -230px;
+  top: 50%;
+  opacity: 0;
+  transition: .2s ease-in all;
+  color: gray;
+}

@@ -1,0 +1,42 @@
+.alignCenter {
+    text-align: center;
+}
+.alignRight {
+    text-align: right;
+}
+.alignLeft {
+    text-align: left;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+%fullHeight {
+    height: 100%;
+}
+
+.fullHeight {
+    @extend %fullHeight;
+}
+
+%fullWidth {
+    width: 100%;
+}
+
+%fullContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.textOverflow {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%breakInTwo { 
+    column-count: 2;
+    column-gap: 5px;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venkata On Cloud</title>
+    
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="stylesheets/all.css">
+    
+    <!--****** Plugings ********-->
+        <!-- jQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- angular js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <!-- font awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+        <!-- Animate.css -->
+        <link rel="stylesheet" type="text/css" href="plugins/animate.css">
+   
+    <script src="javascripts/index.js"></script>
+</head>
+<body class="appContainer" ng-app="challaApp" ng-controller="homeCtrl" ng-class="viewPage">
+<header class="headerContainer">
+    <div data-ng-include="'views/header.html'" class="fullHeight"></div>
+</header>
+<section class="sectionContainer homeSection">
+    <div data-ng-include="'views/homePage.html'" class="fullHeight"></div>
+</section>
+<section class="sectionContainer skillsSection">
+    <div data-ng-include="'views/skills.html'" class="fullHeight"></div>
+</section>
+<section class="sectionContainer experienceSection">
+    <div data-ng-include="'views/experience.html'" class="fullHeight"></div>
+</section>
+<section class="sectionContainer contactSection">
+    <div data-ng-include="'views/contact.html'" class="fullHeight"></div>
+</section>
+<div class="sectionSelector">
+    <div data-ng-include="'views/sectionSelector.html'" class="fullHeight"></div>
+</div>
+<footer class="footerContainer">
+   <div data-ng-include="'views/footer.html'" class="fullHeight"></div>
+</footer>
+
+</body>
+</html>

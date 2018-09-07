@@ -1,0 +1,357 @@
+@import "compass";
+
+.homeSection, .skillsSection, .experienceSection, .contactSection {
+    display: none;
+}
+
+.appContainer {
+    height: $view-port-height;
+    width: $view-port-width;
+    margin:0px;
+    &.homePage .homeSection,&.skillsPage .skillsSection, &.experiencePage .experienceSection, &.contactPage .contactSection {
+        display: block !important;
+    }
+    
+    &.homePage{
+        background-color: darkslategray;
+    }
+    
+    &.skillsPage{
+        background-color: darkslateblue;
+    }
+    
+    &.experiencePage{
+        background-color: darkolivegreen;
+    }
+    
+    &.contactPage{
+        background-color: goldenrod;
+    }
+}
+
+.headerContainer {
+    height: 9%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    .navbar-inverse{
+        background-color: inherit !important;
+        border: none;
+        
+        li{
+            float:right;
+        }
+        
+        a{
+            padding-left: 0px;
+            cursor: pointer;
+        }
+    }
+}
+
+.sectionContainer {
+    position: relative;
+    top: 10%;
+    height: 75%;
+    width: 100%;
+}
+
+.footerContainer {
+    height: 6%;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    color: lightslategray;
+    
+}
+
+.banner {
+    height: 100%;
+    background: inherit !important;
+}
+
+.bannerContainer {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.myContactInfo {
+    padding: 40px;
+    @extend %breakInTwo;
+}
+
+.myButtons{
+    outline:none;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    font-size:20px;
+    background-color:transparent;
+    position:relative;
+    border:2px solid #fff;
+
+    @include transition(all 0.5s ease);
+}
+
+.contact {
+    $color1: #EE283E;
+    $color2: #1F3944;
+    $color3: white;
+    position: relative;
+    background-color:transparent;
+    border: 0px;
+    
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        top: -14px;
+        left: -12px;
+        width: 90px;
+        height: 25px;
+        z-index: 1;
+    }
+    &:before {
+        border: 2px solid $color1;
+        background-color: $color2;
+        transform: skew(-25deg);
+        transition: 0.3s ease-in-out;
+    }
+    
+    &:after {
+        content: "Available for work";
+        font-size: xx-small;
+        top: -7px;
+        left: -13px;
+        color: $color3;
+    }
+    &:hover {
+          &:before {
+            transition: 0.3s ease-in-out;
+            background-color: $color1;
+        }
+    }
+    .contactButton {
+        overflow:hidden;
+        border-color: darkgoldenrod;
+        color: darkgoldenrod;
+
+        .layer {
+            color:#fff;
+            position:absolute;
+            top:-100px;
+            width:100%;
+            left:0;
+            padding:10px 0;
+            background-color: darkgoldenrod;
+            @include transition(all 0.3s ease);
+        }
+
+        &:hover {
+            .layer {
+                top:0;
+                font-size: x-large;
+            }
+        }
+    }
+
+}
+
+.resumeButton {
+    overflow:hidden;
+    border-color: deepskyblue;
+    color: deepskyblue;
+    
+    .layer {
+        color:#fff;
+        position:absolute;
+        top:-100px;
+        width:100%;
+        left:0;
+        padding:10px 0;
+        background-color: deepskyblue;
+        @include transition(all 0.3s ease);
+    }
+
+    &:hover {
+        .layer {
+            top:0;
+            font-size: x-large;
+        }
+    }
+}
+
+.sectionSelector {
+    color: powderblue;
+    font-size: large;
+    cursor: pointer;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    bottom: 10%;
+    left: 0px;
+    text-align: center;
+    span {
+        padding: 2.5px;
+    }
+    .selected svg{
+        transform: scale(1.5, 1.5);
+    }
+    .unSelected svg:hover {
+        transform: scale(1.5, 1.5);
+    }
+    
+}
+
+.extraLargeIcons {
+    font-size: -webkit-xxx-large;
+    font-size: xxx-large;
+}
+
+.contactContainer {
+    color:ghostwhite;
+    border-style: ridge;
+    width: 70%;
+    padding: 3px;
+    @extend %fullHeight;
+    .centerBorder {
+        border-style: dotted;
+        padding: inherit;
+         @extend %fullContainer;
+    }
+    .innerBorder {
+        border-style: double;
+        padding: inherit;
+         @extend %fullContainer;
+    }
+    
+    .contactDiv {
+        padding: 10px;
+        width: 70%;
+        border-bottom: 1px solid gray;
+    }
+    
+    .contactInput {
+        border: none;
+        background: transparent;
+        height: 30px;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    .contactMessage {
+        border: none;
+        background: transparent;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    .sendButton {
+        float:right;
+        letter-spacing: 1px;
+        background: none;
+        color: white;
+        position: relative;
+        top: -16px;
+        outline: none;
+        border: none;
+        height: 90%;
+        width: 190px;
+        font-size: 14px;
+        z-index: 2;
+        transition: .01s .23s ease-out all;
+        overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 55%;
+            background: #202020;
+            z-index: -1;
+            transition: .3s ease-in all;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: -5%;
+            top: 5%;
+            height: 90%;
+            width: 5%;
+            background: white;
+            z-index: -1;
+            transition: .4s .02s ease-in all;
+        }
+        &:hover {
+            cursor: pointer;
+            color: transparent;
+            &:before {
+                left: 100%;
+                width: 25%;
+            }
+            &:after {
+                left: 100%;
+                width: 70%;
+            }
+            .icon-right.after:after {
+                left: -80px;
+                color: white;
+                transition: .2s .2s ease all;
+            }
+            .icon-right.after:before {
+                left: -104px;
+            top: 14px;
+                opacity: 0.2;
+                color: white;
+            }
+        }
+    }
+
+    .icon-right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        &:after {
+            font-family: "FontAwesome";
+            content: '\2192';
+            font-size: 24px;
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            transform: translate3D(0, -50%, 0);
+        }
+        &.after:after {
+            left: -250px;
+            color: black;
+            top: 50%;
+            transition: .15s .25s ease left, .5s .05s ease color;
+        }
+        &.after:before {
+            content: 'Send';
+            position: relative;
+            left: -230px;
+            top: 50%;
+            opacity: 0;
+            transition: .2s ease-in all;
+            color: gray;
+        }
+    }
+
+    
+}
+
+
+
+

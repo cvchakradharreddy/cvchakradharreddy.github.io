@@ -1,0 +1,4 @@
+<span data-ng-repeat="page in viewPages" data-ng-click="selectPage(page.id)">
+       <span data-ng-if="viewPage==page.id" class="selected" > <i class="fas fa-dot-circle"></i> </span>
+       <span data-ng-if="viewPage!=page.id" class="unSelected"> <i class="far fa-dot-circle"></i> </span>
+    </span>

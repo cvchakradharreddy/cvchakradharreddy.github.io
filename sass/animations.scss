@@ -1,0 +1,62 @@
+
+@mixin transition($in) {
+    transition:$in;
+    -webkit-transition:$in;
+    -moz-transition:$in;
+    -o-transition:$in;
+    -ms-transition:$in;
+}
+
+@mixin animateBackground($colors) {
+    animation: colorChange+""+nth($colors, 1) 24s; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorChange+""+nth($colors, 1) 24s infinite; /* Chrome and Safari */
+    -moz-animation:colorChange 24s infinite; /* Firefox */
+    
+    @keyframes colorChange#{nth($colors, 1)}
+    {
+        0%   {background-color: nth($colors, 1);}
+        20%  {background-color: nth($colors, 2);}
+        40%  {background-color: nth($colors, 3);}
+        60%  {background-color: nth($colors, 4);}
+        80%  {background-color: nth($colors, 5);}
+        100% {background-color: nth($colors, 1);}
+    }
+
+    @-webkit-keyframes colorChange#{nth($colors, 1)} /* Safari and Chrome - necessary duplicate */
+    {
+        0%   {background-color: nth($colors, 1);}
+        20%  {background-color: nth($colors, 2);}
+        40%  {background-color: nth($colors, 3);}
+        60%  {background-color: nth($colors, 4);}
+        80%  {background-color: nth($colors, 5);}
+        100% {background-color: nth($colors, 1);}
+    }
+}
+
+@mixin borderFontColorChange($colors) {
+    animation: borderColorChange+""+nth($colors, 1) 24s; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: borderColorChange+""+nth($colors, 1) 24s infinite; /* Chrome and Safari */
+    -moz-animation:borderColorChange 24s infinite; /* Firefox */
+    
+    @keyframes borderColorChange#{nth($colors, 1)}
+    {
+        0%   {border-color: nth($colors, 1); color: nth($colors, 1);}
+        20%  {border-color: nth($colors, 2); color: nth($colors, 2);}
+        40%  {border-color: nth($colors, 3); color: nth($colors, 3);}
+        60%  {border-color: nth($colors, 4); color: nth($colors, 4);}
+        80%  {border-color: nth($colors, 5); color: nth($colors, 5);}
+        100% {border-color: nth($colors, 1); color: nth($colors, 1);}
+    }
+
+    @-webkit-keyframes borderColorChange#{nth($colors, 1)} /* Safari and Chrome - necessary duplicate */
+    {
+        0%   {border-color: nth($colors, 1); color: nth($colors, 1);}
+        20%  {border-color: nth($colors, 2); color: nth($colors, 2);}
+        40%  {border-color: nth($colors, 3); color: nth($colors, 3);}
+        60%  {border-color: nth($colors, 4); color: nth($colors, 4);}
+        80%  {border-color: nth($colors, 5); color: nth($colors, 5);}
+        100% {border-color: nth($colors, 1); color: nth($colors, 1);}
+    }
+}
